@@ -23,7 +23,7 @@ player.prototype.reset = function() {
 function pigGame() {
     this.players = [];
     this.currentPlayerIndex = 0;
-    this.totalWinningScore = 100;
+    this.WinningScore = 100;
 }
 
 pigGame.prototype.addPlayer = function(player){
@@ -35,6 +35,14 @@ pigGame.prototype.getCurrentPlayer = function(){
 }
 
 pigGame.prototype.switchTurn = function(){
-    this.currentPlayerIndex = (this.currentPlayerIndex + 1) % this.players.length
+    this.currentPlayerIndex = (this.currentPlayerIndex + 1) % this.players.length;
 }
 
+pigGame.prototype.gameOver = function(){
+    return this.players.some(player => player.totalScore >= this.winningScore);
+}
+
+pigGame.prototype.resetGame = function(){
+    this.players.forEach(player => player.reset());
+    this.currentPlayerIndex = 0;
+}
