@@ -23,7 +23,7 @@ Player.prototype.reset = function () {
 function PigGame() {
     this.players = [];
     this.currentPlayerIndex = 0;
-    this.winningScore = 100; // Set a winning score
+    this.winningScore = 50; // Set a winning score
 }
 
 PigGame.prototype.addPlayer = function (player) {
@@ -65,11 +65,23 @@ function displayScores() {
     });
 }
 
-function showDie(roll) {
-    const dice = document.getElementById("dice");
-    // Corrected image URL for dice sides 1 to 6
-    dice.src = `https://upload.wikimedia.org/wikipedia/commons/${['1/1b/Dice-1-b.svg', '5/5f/Dice-2-b.svg', '2/2c/Dice-3-b.svg', 'f/fd/Dice-4-b.svg', '0/08/Dice-5-b.svg', 'a/a6/Dice-6-b.svg'][roll - 1]}`;
-}
+        // Function to update dice face
+        function showDie(roll) {
+            const dice = document.getElementById("dice");
+            const diceImages = [
+                '1/1b/Dice-1-b.svg', 
+                '5/5f/Dice-2-b.svg', 
+                '2/2c/Dice-3-b.svg', 
+                'f/fd/Dice-4-b.svg', 
+                '0/08/Dice-5-b.svg', 
+                'a/a6/Dice-6-b.svg'
+            ];
+            dice.classList.add('animate');
+            setTimeout(() => {
+                dice.src = `https://upload.wikimedia.org/wikipedia/commons/thumb/${diceImages[roll - 1]}/1200px-Dice-${roll}-b.svg.png`;
+                dice.classList.remove('animate');
+            }, 300); // 300ms delay to allow transition effect
+        }
 
 function showPopupMessage(message) {
     const popup = document.getElementById("popup-message");
@@ -142,3 +154,5 @@ function initializeGame() {
 window.onload = function () {
     initializeGame();
 };
+
+
