@@ -74,7 +74,7 @@ function displayScores() {
                 '2/2c/Dice-3-b.svg', 
                 'f/fd/Dice-4-b.svg', 
                 '0/08/Dice-5-b.svg', 
-                'a/a6/Dice-6-b.svg'
+                'a/a6/Dice-6-b.svg'  // Corrected Dice-6 URL
             ];
             dice.classList.add('animate');
             setTimeout(() => {
