@@ -23,7 +23,7 @@ Player.prototype.reset = function () {
 function PigGame() {
     this.players = [];
     this.currentPlayerIndex = 0;
-    this.winningScore = 50; // Set a winning score
+    this.winningScore = 100; 
 }
 
 PigGame.prototype.addPlayer = function (player) {
