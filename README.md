@@ -31,6 +31,7 @@ Please contact emmaokpiaifo@gmail.com with questions, comments, or issues.
 
 ## Known bugs
 * Page refresh completely restarts the game
+* Dice face for 6 doesn't appear
 
 ### License
 
