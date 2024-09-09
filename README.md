@@ -2,7 +2,7 @@
 
 #### _Acedu Project in JavaScript, September 6, 2024_
 
-#### By Emmanuel OKpiaifo
+#### By Emmanuel Okpiaifo
 
 ## Description
 
